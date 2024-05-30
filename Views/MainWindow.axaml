@@ -28,17 +28,56 @@
         </Style>
         
         <Style Selector="Button.btn">
-            <Setter Property="Width" Value="170"></Setter>
-            <Setter Property="Height" Value="50"></Setter>
+            <Setter Property="Width" Value="180"></Setter>
+            <Setter Property="Height" Value="60"></Setter>
             <Setter Property="CornerRadius" Value="50"></Setter>
             <Setter Property="FontSize" Value="20"></Setter>
             <Setter Property="Margin" Value="30, 20, 0, 0"></Setter>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
             <Setter Property="HorizontalContentAlignment" Value="Center"/> 
             <Setter Property="Foreground" Value="White"></Setter>
-            <Setter Property="FontWeight" Value="Regular"></Setter>
+            <Setter Property="FontWeight" Value="Light"></Setter>
         </Style>
         
+        <!-- Styly pro proužky -->
+        <Style Selector="Rectangle.stripe1">
+            <Setter Property="Width" Value="1000"/>
+            <Setter Property="Height" Value="150"/>
+            <Setter Property="Fill" Value="#7FA7FF"/>
+            <Setter Property="Margin" Value="0, 370,10,0"/>
+            <Setter Property="RenderTransformOrigin" Value="0.5,0.5"/>
+            <Setter Property="RenderTransform">
+                <Setter.Value>
+                    <RotateTransform Angle="-30"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        <Style Selector="Rectangle.stripe2">
+            <Setter Property="Width" Value="1000"/>
+            <Setter Property="Height" Value="150"/>
+            <Setter Property="Fill" Value="#FF7F6C"/>
+            <Setter Property="Margin" Value="0, 0,10,0"/>
+            <Setter Property="RenderTransformOrigin" Value="0.5,0.5"/>
+            <Setter Property="RenderTransform">
+                <Setter.Value>
+                    <RotateTransform Angle="-30"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        <Style Selector="Rectangle.stripe3">
+            <Setter Property="Width" Value="1000"/>
+            <Setter Property="Height" Value="150"/>
+            <Setter Property="Fill" Value="#FEE46C"/>
+            <Setter Property="Margin" Value="0, 0,10,0"/>
+            <Setter Property="RenderTransformOrigin" Value="0.5,0.5"/>
+            <Setter Property="RenderTransform">
+                <Setter.Value>
+                    <RotateTransform Angle="-30"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Styles>
 
     <StackPanel>
@@ -47,5 +86,10 @@
         -->
         <TextBlock Classes="h1" Text="{Binding CombinedHeading}"/>
         <Button Classes="btn" Content="Convert Now"/>
+        
+        <!-- Tři proužky s různými barvami -->
+        <Rectangle Classes="stripe1"/>
+        <Rectangle Classes="stripe2"/>
+        <Rectangle Classes="stripe3"/>
     </StackPanel>
 </Window>
