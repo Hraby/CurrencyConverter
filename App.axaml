@@ -2,7 +2,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="UnitConverter.App"
              xmlns:local="using:UnitConverter"
-             RequestedThemeVariant="Default">
+             RequestedThemeVariant="Light">
              <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 
     <Application.DataTemplates>
@@ -10,6 +10,10 @@
     </Application.DataTemplates>
   
     <Application.Styles>
-        <FluentTheme />
+        <FluentTheme>
+            <FluentTheme.Palettes>
+                <ColorPaletteResources x:Key="Light" Accent="#ffff705a" AltHigh="White" AltLow="White" AltMedium="White" AltMediumHigh="White" AltMediumLow="White" BaseHigh="Black" BaseLow="#ffff705a" BaseMedium="#ffbb3229" BaseMediumHigh="#ff8d0908" BaseMediumLow="#ffa41e18" ChromeAltLow="#ff8d0908" ChromeBlackHigh="Black" ChromeBlackLow="#ffff705a" ChromeBlackMedium="#ff8d0908" ChromeBlackMediumLow="#ffbb3229" ChromeDisabledHigh="#ffff705a" ChromeDisabledLow="#ffbb3229" ChromeGray="#ffa41e18" ChromeHigh="#ffff705a" ChromeLow="#ffffc6bc" ChromeMedium="#ffffb5a8" ChromeMediumLow="#ffffc6bc" ChromeWhite="White" ListLow="#ffffb5a8" ListMedium="#ffff705a" RegionColor="White" />
+            </FluentTheme.Palettes>
+        </FluentTheme>
     </Application.Styles>
 </Application>

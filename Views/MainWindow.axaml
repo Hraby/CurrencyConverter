@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        d:DesignWidth="390"
+        d:DesignWidth="400"
         d:DesignHeight="844"
         x:Class="UnitConverter.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
@@ -15,10 +15,37 @@
         CanResize="False">
 
     <Design.DataContext>
-        <!-- This only sets the DataContext for the previewer in an IDE,
-             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
         <vm:MainWindowViewModel/>
     </Design.DataContext>
+    
+    <Window.Styles>
+        <Style Selector="TextBlock.h1">
+            <Setter Property="FontSize" Value="60"/>
+            <Setter Property="FontWeight" Value="ExtraBold"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Foreground" Value="#565A81"/>
+            <Setter Property="Margin" Value="30,200,0,0"/>
+        </Style>
+        
+        <Style Selector="Button.btn">
+            <Setter Property="Width" Value="170"></Setter>
+            <Setter Property="Height" Value="50"></Setter>
+            <Setter Property="CornerRadius" Value="50"></Setter>
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="Margin" Value="30, 20, 0, 0"></Setter>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/> 
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="FontWeight" Value="Regular"></Setter>
+        </Style>
+        
+    </Window.Styles>
 
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    <StackPanel>
+        <!--
+        <Image Source="{Binding Logo}"/>
+        -->
+        <TextBlock Classes="h1" Text="{Binding CombinedHeading}"/>
+        <Button Classes="btn" Content="Convert Now"/>
+    </StackPanel>
 </Window>
