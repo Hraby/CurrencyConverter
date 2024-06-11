@@ -36,7 +36,7 @@ namespace UnitConverter.ViewModels
         };
         
         [RelayCommand]
-        public void TriggerPaneCommand()  // Změna přístupového modifikátoru na public
+        public void TriggerPaneCommand()
         {
             IsPaneOpen = !IsPaneOpen;
         }

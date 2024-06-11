@@ -5,78 +5,46 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="UnitConverter.Views.HomePageView">
     
-    
     <StackPanel>
-        <!-- <Image Source="{Binding Logo}"/> -->
-        <TextBlock Classes="h1" Text="Currency converter"/>
-        <Button Classes="btn" Content="Convert Now"/>
-                
-        <!-- Tři proužky s různými barvami -->
-        <Rectangle Classes="stripe1"/>
-        <Rectangle Classes="stripe2"/>
-        <Rectangle Classes="stripe3"/>
+        <TextBlock Classes="h1" Text="Best Currency Converter"/>
+        <TextBlock Classes="h2" Text="the most up-to-date rates"></TextBlock>
+        <TextBlock Classes="p" Text="Lorem ipsum dolor sit amet ghin lut aur foef"></TextBlock>     
+        
+        <Image Classes="img" Source="avares://UnitConverter/Assets/images/money.png"/>
+        
     </StackPanel>
     
-     <UserControl.Styles>
+    <UserControl.Styles>
+        <Style Selector="Image.img">
+            <Setter Property="Width" Value="550"></Setter>
+            <Setter Property="Height" Value="550"></Setter>
+        </Style>
+        
         <Style Selector="TextBlock.h1">
-            <Setter Property="FontSize" Value="60"/>
+            <Setter Property="FontSize" Value="70"/>
             <Setter Property="FontWeight" Value="ExtraBold"/>
-            <Setter Property="HorizontalAlignment" Value="Left"/>
-            <Setter Property="Foreground" Value="#565A81"/>
-            <Setter Property="Margin" Value="30,200,0,0"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="#2C3940"/>
+            <Setter Property="Margin" Value="00,150,0,0"/>
+            <Setter Property="ZIndex" Value="1"/>
         </Style>
-    
-        <Style Selector="Button.btn">
-            <Setter Property="Width" Value="180"></Setter>
-            <Setter Property="Height" Value="60"></Setter>
-            <Setter Property="CornerRadius" Value="50"></Setter>
-            <Setter Property="FontSize" Value="20"></Setter>
-            <Setter Property="Margin" Value="30, 20, 0, 0"></Setter>
-            <Setter Property="VerticalContentAlignment" Value="Center"/>
-            <Setter Property="HorizontalContentAlignment" Value="Center"/>
-            <Setter Property="Foreground" Value="White"></Setter>
-            <Setter Property="FontWeight" Value="Light"></Setter>
+        
+        <Style Selector="TextBlock.h2">
+            <Setter Property="FontSize" Value="60"/>
+            <Setter Property="FontWeight" Value="Regular"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="#2C3940"/>
+            <Setter Property="Margin" Value="20,0,0,0"/>
+            <Setter Property="ZIndex" Value="1"/>
         </Style>
-    
-        <!-- Styly pro proužky -->
-        <Style Selector="Rectangle.stripe1">
-            <Setter Property="Width" Value="1000"/>
-            <Setter Property="Height" Value="150"/>
-            <Setter Property="Fill" Value="#7FA7FF"/>
-            <Setter Property="Margin" Value="0, 370,10,0"/>
-            <Setter Property="RenderTransformOrigin" Value="0.5,0.5"/>
-            <Setter Property="RenderTransform">
-                <Setter.Value>
-                    <RotateTransform Angle="-30"/>
-                </Setter.Value>
-            </Setter>
-        </Style>
-    
-        <Style Selector="Rectangle.stripe2">
-            <Setter Property="Width" Value="1000"/>
-            <Setter Property="Height" Value="150"/>
-            <Setter Property="Fill" Value="#FF7F6C"/>
-            <Setter Property="Margin" Value="0, 0,10,0"/>
-            <Setter Property="RenderTransformOrigin" Value="0.5,0.5"/>
-            <Setter Property="RenderTransform">
-                <Setter.Value>
-                    <RotateTransform Angle="-30"/>
-                </Setter.Value>
-            </Setter>
-        </Style>
-    
-        <Style Selector="Rectangle.stripe3">
-            <Setter Property="Width" Value="1000"/>
-            <Setter Property="Height" Value="150"/>
-            <Setter Property="Fill" Value="#FEE46C"/>
-            <Setter Property="Margin" Value="0, 0,10,0"/>
-            <Setter Property="RenderTransformOrigin" Value="0.5,0.5"/>
-            <Setter Property="RenderTransform">
-                <Setter.Value>
-                    <RotateTransform Angle="-30"/>
-                </Setter.Value>
-            </Setter>
+        
+        <Style Selector="TextBlock.p">
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontWeight" Value="Thin"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="#2C3940"/>
+            <Setter Property="Margin" Value="10,30,0,0"/>
+            <Setter Property="ZIndex" Value="1"/>
         </Style>
     </UserControl.Styles>
 </UserControl>
-

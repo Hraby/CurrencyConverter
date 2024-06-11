@@ -10,8 +10,8 @@
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
         Title="UnitConverter"
-        Width="400"
-        Height="844"
+        Width="1000"
+        Height="1000"
         CanResize="False">
 
     <Design.DataContext>
@@ -22,7 +22,7 @@
                OpenPaneLength="200"
                CompactPaneLength="100"
                DisplayMode="CompactInline"
-               Background="#565A81"
+               Background="White"
                >
         <SplitView.Pane>
             <StackPanel Spacing="5"
