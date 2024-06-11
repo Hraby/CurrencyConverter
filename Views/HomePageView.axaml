@@ -1,0 +1,82 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="UnitConverter.Views.HomePageView">
+    
+    
+    <StackPanel>
+        <!-- <Image Source="{Binding Logo}"/> -->
+        <TextBlock Classes="h1" Text="Currency converter"/>
+        <Button Classes="btn" Content="Convert Now"/>
+                
+        <!-- Tři proužky s různými barvami -->
+        <Rectangle Classes="stripe1"/>
+        <Rectangle Classes="stripe2"/>
+        <Rectangle Classes="stripe3"/>
+    </StackPanel>
+    
+     <UserControl.Styles>
+        <Style Selector="TextBlock.h1">
+            <Setter Property="FontSize" Value="60"/>
+            <Setter Property="FontWeight" Value="ExtraBold"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Foreground" Value="#565A81"/>
+            <Setter Property="Margin" Value="30,200,0,0"/>
+        </Style>
+    
+        <Style Selector="Button.btn">
+            <Setter Property="Width" Value="180"></Setter>
+            <Setter Property="Height" Value="60"></Setter>
+            <Setter Property="CornerRadius" Value="50"></Setter>
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="Margin" Value="30, 20, 0, 0"></Setter>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="FontWeight" Value="Light"></Setter>
+        </Style>
+    
+        <!-- Styly pro proužky -->
+        <Style Selector="Rectangle.stripe1">
+            <Setter Property="Width" Value="1000"/>
+            <Setter Property="Height" Value="150"/>
+            <Setter Property="Fill" Value="#7FA7FF"/>
+            <Setter Property="Margin" Value="0, 370,10,0"/>
+            <Setter Property="RenderTransformOrigin" Value="0.5,0.5"/>
+            <Setter Property="RenderTransform">
+                <Setter.Value>
+                    <RotateTransform Angle="-30"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    
+        <Style Selector="Rectangle.stripe2">
+            <Setter Property="Width" Value="1000"/>
+            <Setter Property="Height" Value="150"/>
+            <Setter Property="Fill" Value="#FF7F6C"/>
+            <Setter Property="Margin" Value="0, 0,10,0"/>
+            <Setter Property="RenderTransformOrigin" Value="0.5,0.5"/>
+            <Setter Property="RenderTransform">
+                <Setter.Value>
+                    <RotateTransform Angle="-30"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    
+        <Style Selector="Rectangle.stripe3">
+            <Setter Property="Width" Value="1000"/>
+            <Setter Property="Height" Value="150"/>
+            <Setter Property="Fill" Value="#FEE46C"/>
+            <Setter Property="Margin" Value="0, 0,10,0"/>
+            <Setter Property="RenderTransformOrigin" Value="0.5,0.5"/>
+            <Setter Property="RenderTransform">
+                <Setter.Value>
+                    <RotateTransform Angle="-30"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Styles>
+</UserControl>
+

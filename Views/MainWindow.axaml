@@ -18,78 +18,34 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
     
-    <Window.Styles>
-        <Style Selector="TextBlock.h1">
-            <Setter Property="FontSize" Value="60"/>
-            <Setter Property="FontWeight" Value="ExtraBold"/>
-            <Setter Property="HorizontalAlignment" Value="Left"/>
-            <Setter Property="Foreground" Value="#565A81"/>
-            <Setter Property="Margin" Value="30,200,0,0"/>
-        </Style>
-        
-        <Style Selector="Button.btn">
-            <Setter Property="Width" Value="180"></Setter>
-            <Setter Property="Height" Value="60"></Setter>
-            <Setter Property="CornerRadius" Value="50"></Setter>
-            <Setter Property="FontSize" Value="20"></Setter>
-            <Setter Property="Margin" Value="30, 20, 0, 0"></Setter>
-            <Setter Property="VerticalContentAlignment" Value="Center"/>
-            <Setter Property="HorizontalContentAlignment" Value="Center"/> 
-            <Setter Property="Foreground" Value="White"></Setter>
-            <Setter Property="FontWeight" Value="Light"></Setter>
-        </Style>
-        
-        <!-- Styly pro proužky -->
-        <Style Selector="Rectangle.stripe1">
-            <Setter Property="Width" Value="1000"/>
-            <Setter Property="Height" Value="150"/>
-            <Setter Property="Fill" Value="#7FA7FF"/>
-            <Setter Property="Margin" Value="0, 370,10,0"/>
-            <Setter Property="RenderTransformOrigin" Value="0.5,0.5"/>
-            <Setter Property="RenderTransform">
-                <Setter.Value>
-                    <RotateTransform Angle="-30"/>
-                </Setter.Value>
-            </Setter>
-        </Style>
-        
-        <Style Selector="Rectangle.stripe2">
-            <Setter Property="Width" Value="1000"/>
-            <Setter Property="Height" Value="150"/>
-            <Setter Property="Fill" Value="#FF7F6C"/>
-            <Setter Property="Margin" Value="0, 0,10,0"/>
-            <Setter Property="RenderTransformOrigin" Value="0.5,0.5"/>
-            <Setter Property="RenderTransform">
-                <Setter.Value>
-                    <RotateTransform Angle="-30"/>
-                </Setter.Value>
-            </Setter>
-        </Style>
-        
-        <Style Selector="Rectangle.stripe3">
-            <Setter Property="Width" Value="1000"/>
-            <Setter Property="Height" Value="150"/>
-            <Setter Property="Fill" Value="#FEE46C"/>
-            <Setter Property="Margin" Value="0, 0,10,0"/>
-            <Setter Property="RenderTransformOrigin" Value="0.5,0.5"/>
-            <Setter Property="RenderTransform">
-                <Setter.Value>
-                    <RotateTransform Angle="-30"/>
-                </Setter.Value>
-            </Setter>
-        </Style>
-    </Window.Styles>
-
-    <StackPanel>
-        <!--
-        <Image Source="{Binding Logo}"/>
-        -->
-        <TextBlock Classes="h1" Text="{Binding CombinedHeading}"/>
-        <Button Classes="btn" Content="Convert Now"/>
-        
-        <!-- Tři proužky s různými barvami -->
-        <Rectangle Classes="stripe1"/>
-        <Rectangle Classes="stripe2"/>
-        <Rectangle Classes="stripe3"/>
-    </StackPanel>
+    <SplitView IsPaneOpen="{Binding IsPaneOpen}"
+               OpenPaneLength="200"
+               CompactPaneLength="100"
+               DisplayMode="CompactInline"
+               Background="#565A81"
+               >
+        <SplitView.Pane>
+            <StackPanel Spacing="5"
+                        Margin="5"
+                        >
+                <Button Command="{Binding TriggerPaneCommand}">
+                    -
+                </Button>
+                <ListBox ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedListItem}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate DataType="{x:Type vm:ListItemTemplate}">
+                            <StackPanel Spacing="15" Orientation="Horizontal">
+                                <TextBlock Text="{Binding Label}"></TextBlock>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </StackPanel>
+        </SplitView.Pane>
+        <SplitView.Content>
+            <TransitioningContentControl Content="{Binding CurrentPage}"></TransitioningContentControl>
+        </SplitView.Content>
+    </SplitView>
+    
+   
 </Window>
