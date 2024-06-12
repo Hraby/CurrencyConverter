@@ -12,27 +12,27 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         
         <StackPanel Grid.Row="0" Background="#FFFFFF">
             <TextBlock Text="{Binding FormattedSelectedCurrency}" Classes="h1"/>
             <TextBox BorderThickness="0" Text="{Binding InputValue}" Classes="value"/>
-            <StackPanel Margin="20" Classes="currency">
+            <StackPanel Margin="20" HorizontalAlignment="Center">
                 <ComboBox ItemsSource="{Binding Currencies}"
                           SelectedItem="{Binding SelectedCurrency}"
-                          MaxDropDownHeight="100">
+                          MaxDropDownHeight="100"
+                          Classes="currency">
                 </ComboBox>
             </StackPanel>
         </StackPanel>
         
-        <StackPanel Grid.Row="1" Background="#FF7058">
-            <Image Source="avares://UnitConverter/Assets/images/arrow.png" Width="100" Height="100" Margin="0,10" HorizontalAlignment="Center"/>
-            <StackPanel Margin="20" Classes="currency2">
+        <StackPanel Grid.Row="1" Background="#ff6450">
+            <StackPanel Margin="20" HorizontalAlignment="Center">
                 <ComboBox ItemsSource="{Binding LowerCurrencies}"
                           SelectedItem="{Binding LowerSelectedCurrency}"
-                          MaxDropDownHeight="100">
+                          MaxDropDownHeight="100"
+                          Classes="currency2">
                 </ComboBox>
             </StackPanel>
             <TextBlock Text="{Binding ConvertedValue, StringFormat={}{0:F2}}" Classes="value2"/>
@@ -45,27 +45,27 @@
             <Setter Property="FontSize" Value="25"/>
             <Setter Property="FontWeight" Value="ExtraBold"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
-            <Setter Property="Foreground" Value="#FF7058"/>
+            <Setter Property="Foreground" Value="#ff6450"/>
             <Setter Property="Margin" Value="0,60,0,0"/>
             <Setter Property="ZIndex" Value="1"/>
         </Style>
         
-        <Style Selector="TextBlock.value">
+        <Style Selector="TextBox.value">
             <Setter Property="FontSize" Value="90"/>
             <Setter Property="FontWeight" Value="Regular"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
-            <Setter Property="Foreground" Value="#FF7058"/>
+            <Setter Property="Foreground" Value="#ff6450"/>
             <Setter Property="Margin" Value="0,45,0,0"/>
             <Setter Property="ZIndex" Value="1"/>
         </Style>
         
-        <Style Selector="TextBlock.currency">
+        <Style Selector="ComboBox.currency">
             <Setter Property="FontSize" Value="20"/>
             <Setter Property="FontWeight" Value="Light"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
-            <Setter Property="Foreground" Value="#FF7058"/>
-            <Setter Property="Margin" Value="0,60,0,0"/>
+            <Setter Property="Foreground" Value="#ff6450"/>
             <Setter Property="ZIndex" Value="1"/>
+            <Setter Property="Margin" Value="0,25,0,0"/>
         </Style>
         
         <Style Selector="TextBlock.h2">
@@ -86,13 +86,13 @@
             <Setter Property="ZIndex" Value="1"/>
         </Style>
         
-        <Style Selector="TextBlock.currency2">
+        <Style Selector="ComboBox.currency2">
             <Setter Property="FontSize" Value="20"/>
             <Setter Property="FontWeight" Value="Light"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
-            <Setter Property="Foreground" Value="White"/>
-            <Setter Property="Margin" Value="0,60,0,0"/>
+            <Setter Property="Foreground" Value="#ff6450"/>
             <Setter Property="ZIndex" Value="1"/>
+            <Setter Property="Margin" Value="0, 25, 0, 0"></Setter>
         </Style>
     </UserControl.Styles>
     
