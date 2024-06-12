@@ -4,5 +4,27 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="UnitConverter.Views.ConverterPageView">
-    Converter
+        
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <!-- Upper part -->
+        <StackPanel Grid.Row="0" Background="#FFFFFF">
+            <TextBlock Text="Euro" Classes="h1"/>
+            <TextBlock Text="100.0" Classes="value"/>
+            <TextBlock Text="EUR" Classes="currency"/>
+        </StackPanel>
+        
+        <!-- Middle part with icon -->
+        <StackPanel Grid.Row="1" Background="#FF7058">
+            <Image Source="avares://UnitConverter/Assets/images/arrow.png" Width="100" Height="100" Margin="0,10" HorizontalAlignment="Center"/>
+            <TextBlock Text="USD" Classes="currency"/>
+            <TextBlock Text="116.77" Classes="value"/>
+            <TextBlock Text="Americký dollar" Classes="subtext"/>
+        </StackPanel>
+    </Grid>
+    
 </UserControl>
