@@ -8,7 +8,7 @@
     <StackPanel>
         <TextBlock Classes="h1" Text="Best Currency Converter"/>
         <TextBlock Classes="h2" Text="the most up-to-date rates"></TextBlock>
-        <TextBlock Classes="p" Text="Lorem ipsum dolor sit amet ghin lut aur foef"></TextBlock>     
+        <TextBlock Classes="p" Text="Mirek Ondroušek & Michal Hrabal"></TextBlock>     
         
         <Image Classes="img" Source="avares://UnitConverter/Assets/images/money.png"/>
         

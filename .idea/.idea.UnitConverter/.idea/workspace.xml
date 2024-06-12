@@ -9,10 +9,8 @@
   <component name="ChangeListManager">
     <list default="true" id="70f287b3-ca3e-4308-8085-c2791e02aaec" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnitConverter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnitConverter/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ViewModels/MainWindowViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ViewModels/MainWindowViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ViewModels/ConverterPageViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ViewModels/ConverterPageViewModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Views/ConverterPageView.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/ConverterPageView.axaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/HomePageView.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/HomePageView.axaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/MainWindow.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/MainWindow.axaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,9 +56,9 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\2021OndrousekMirosla.SKOLABALTACI\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\2021OndrousekMirosla.SKOLABALTACI\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\2021OndrousekMirosla.SKOLABALTACI\\AppData\\Local\\Symbols\\src"
+      "C:\\Users\\2021HrabalMichal\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\2021HrabalMichal\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\2021HrabalMichal\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
@@ -99,6 +97,7 @@
       <workItem from="1718123332451" duration="6150000" />
       <workItem from="1718182448364" duration="137000" />
       <workItem from="1718182624124" duration="3507000" />
+      <workItem from="1718186349753" duration="337000" />
     </task>
     <servers />
   </component>

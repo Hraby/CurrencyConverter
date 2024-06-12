@@ -2,7 +2,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
+             mc:Ignorable="d"
+             d:DesignWidth="600"
+             d:DesignHeight="800"
+             xmlns:vm="using:UnitConverter.ViewModels"
+             x:DataType="vm:ConverterPageViewModel"
              x:Class="UnitConverter.Views.ConverterPageView">
         
     <Grid>
@@ -13,13 +17,23 @@
         </Grid.RowDefinitions>
         
         <StackPanel Grid.Row="0" Background="#FFFFFF">
-            <TextBlock Text="Euro" Classes="h1"/>
-            <TextBlock Text="100.0" Classes="value"/>
-            <TextBlock Text="EUR" Classes="currency"/>
+            <TextBlock Text="{Binding FormattedSelectedCurrency}" Classes="h1"/>
+            <TextBox BorderThickness="0" Watermark="100" Classes="value"/>
+            <StackPanel Margin="20" Classes="currency">
+                <ComboBox ItemsSource="{Binding Currencies}"
+                          SelectedItem="{Binding SelectedCurrency}"
+                          MaxDropDownHeight="100">
+                </ComboBox>
+            </StackPanel>
         </StackPanel>
         
         <StackPanel Grid.Row="2" Background="#FF7058">
-            <TextBlock Text="USD" Classes="currency2"/>
+            <StackPanel Margin="20" Classes="currency2">
+                <ComboBox ItemsSource=""
+                          SelectedItem=""
+                          MaxDropDownHeight="100">
+                </ComboBox>
+            </StackPanel>
             <TextBlock Text="116.77" Classes="value2"/>
             <TextBlock Text="Americký dollar" Classes="h2"/>
         </StackPanel>
