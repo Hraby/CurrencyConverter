@@ -2,29 +2,83 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
              x:Class="UnitConverter.Views.ConverterPageView">
         
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         
-        <!-- Upper part -->
         <StackPanel Grid.Row="0" Background="#FFFFFF">
             <TextBlock Text="Euro" Classes="h1"/>
             <TextBlock Text="100.0" Classes="value"/>
             <TextBlock Text="EUR" Classes="currency"/>
         </StackPanel>
         
-        <!-- Middle part with icon -->
-        <StackPanel Grid.Row="1" Background="#FF7058">
-            <Image Source="avares://UnitConverter/Assets/images/arrow.png" Width="100" Height="100" Margin="0,10" HorizontalAlignment="Center"/>
-            <TextBlock Text="USD" Classes="currency"/>
-            <TextBlock Text="116.77" Classes="value"/>
-            <TextBlock Text="Americký dollar" Classes="subtext"/>
+        <StackPanel Grid.Row="2" Background="#FF7058">
+            <TextBlock Text="USD" Classes="currency2"/>
+            <TextBlock Text="116.77" Classes="value2"/>
+            <TextBlock Text="Americký dollar" Classes="h2"/>
         </StackPanel>
     </Grid>
+    
+    <UserControl.Styles>
+        <Style Selector="TextBlock.h1">
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="FontWeight" Value="ExtraBold"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="#FF7058"/>
+            <Setter Property="Margin" Value="0,60,0,0"/>
+            <Setter Property="ZIndex" Value="1"/>
+        </Style>
+        
+        <Style Selector="TextBlock.value">
+            <Setter Property="FontSize" Value="90"/>
+            <Setter Property="FontWeight" Value="Regular"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="#FF7058"/>
+            <Setter Property="Margin" Value="0,45,0,0"/>
+            <Setter Property="ZIndex" Value="1"/>
+        </Style>
+        
+        <Style Selector="TextBlock.currency">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontWeight" Value="Light"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="#FF7058"/>
+            <Setter Property="Margin" Value="0,60,0,0"/>
+            <Setter Property="ZIndex" Value="1"/>
+        </Style>
+        
+        <Style Selector="TextBlock.h2">
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="FontWeight" Value="ExtraBold"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Margin" Value="0,60,0,0"/>
+            <Setter Property="ZIndex" Value="1"/>
+        </Style>
+        
+        <Style Selector="TextBlock.value2">
+            <Setter Property="FontSize" Value="90"/>
+            <Setter Property="FontWeight" Value="Regular"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Margin" Value="0,45,0,0"/>
+            <Setter Property="ZIndex" Value="1"/>
+        </Style>
+        
+        <Style Selector="TextBlock.currency2">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontWeight" Value="Light"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Margin" Value="0,60,0,0"/>
+            <Setter Property="ZIndex" Value="1"/>
+        </Style>
+    </UserControl.Styles>
     
 </UserControl>

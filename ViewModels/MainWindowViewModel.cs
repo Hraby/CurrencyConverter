@@ -40,19 +40,6 @@ namespace UnitConverter.ViewModels
         {
             IsPaneOpen = !IsPaneOpen;
         }
-
-        public string Heading1 => "Currency";
-        public string Heading2 => "Converter";
-        public string CombinedHeading => $"{Heading1}\n{Heading2}";
-
-        public MainWindowViewModel()
-        {
-            string logoPath = "Assets/images/logo.png";
-            if (File.Exists(logoPath))
-            {
-                Logo = new Bitmap(logoPath);
-            }
-        }
     }
 
     public class ListItemTemplate
