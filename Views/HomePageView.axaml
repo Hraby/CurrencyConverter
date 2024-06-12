@@ -8,7 +8,7 @@
     <StackPanel>
         <TextBlock Classes="h1" Text="Best Currency Converter"/>
         <TextBlock Classes="h2" Text="the most up-to-date rates"></TextBlock>
-        <TextBlock Classes="p" Text="Mirek Ondroušek & Michal Hrabal"></TextBlock>     
+        <TextBlock Classes="p" Text="Mirek Ondroušek a Michal Hrabal"></TextBlock>     
         
         <Image Classes="img" Source="avares://UnitConverter/Assets/images/money.png"/>
         
@@ -39,8 +39,8 @@
         </Style>
         
         <Style Selector="TextBlock.p">
-            <Setter Property="FontSize" Value="20"/>
-            <Setter Property="FontWeight" Value="Thin"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="Normal"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="Foreground" Value="#2C3940"/>
             <Setter Property="Margin" Value="10,30,0,0"/>
