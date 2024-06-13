@@ -23,7 +23,7 @@ public partial class ConverterPageViewModel : ViewModelBase
 
     public ConverterPageViewModel()
     {
-        Currencies = new ObservableCollection<string> { "EUR", "USD", "CZK" };
+        Currencies = new ObservableCollection<string> { "EUR", "USD", "CZK", "GBP", "HUF", "JPY", "PLN", "CHF", "IRR" };
         FetchExchangeRates();
         SelectedCurrency = Currencies[0];
     }
@@ -42,6 +42,12 @@ public partial class ConverterPageViewModel : ViewModelBase
         "EUR" => "Euro",
         "USD" => "Americký dolar",
         "CZK" => "Česká koruna",
+        "GBP" => "Britská libra",
+        "HUF" => "Maďarský forint",
+        "JPY" => "Japonský jen",
+        "PLN" => "Polský zlotý",
+        "CHF" => "Švýcarský frank",
+        "IRR" => "Iránský riál",
         _ => SelectedCurrency
     };
 
@@ -50,6 +56,12 @@ public partial class ConverterPageViewModel : ViewModelBase
         "EUR" => "Euro",
         "USD" => "Americký dolar",
         "CZK" => "Česká koruna",
+        "GBP" => "Britská libra",
+        "HUF" => "Maďarský forint",
+        "JPY" => "Japonský jen",
+        "PLN" => "Polský zlotý",
+        "CHF" => "Švýcarský frank",
+        "IRR" => "Iránský riál",
         _ => LowerSelectedCurrency
     };
 

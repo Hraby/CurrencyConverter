@@ -21,7 +21,7 @@
             <StackPanel Margin="20" HorizontalAlignment="Center">
                 <ComboBox ItemsSource="{Binding Currencies}"
                           SelectedItem="{Binding SelectedCurrency}"
-                          MaxDropDownHeight="100"
+                          MaxDropDownHeight="200"
                           Classes="currency">
                 </ComboBox>
             </StackPanel>
@@ -31,7 +31,7 @@
             <StackPanel Margin="20" HorizontalAlignment="Center">
                 <ComboBox ItemsSource="{Binding LowerCurrencies}"
                           SelectedItem="{Binding LowerSelectedCurrency}"
-                          MaxDropDownHeight="100"
+                          MaxDropDownHeight="200"
                           Classes="currency2">
                 </ComboBox>
             </StackPanel>
