@@ -17,7 +17,9 @@
         
         <StackPanel Grid.Row="0" Background="#FFFFFF">
             <TextBlock Text="{Binding FormattedSelectedCurrency}" Classes="h1"/>
-            <TextBox BorderThickness="0" Text="{Binding InputValue}" Classes="value"/>
+            <Viewbox Stretch="Uniform" Height="150" Width="400">
+                <TextBox BorderThickness="0" Text="{Binding InputValue}" Classes="value"/>
+            </Viewbox>
             <StackPanel Margin="20" HorizontalAlignment="Center">
                 <ComboBox ItemsSource="{Binding Currencies}"
                           SelectedItem="{Binding SelectedCurrency}"
@@ -35,7 +37,9 @@
                           Classes="currency2">
                 </ComboBox>
             </StackPanel>
-            <TextBlock Text="{Binding ConvertedValue, StringFormat={}{0:F2}}" Classes="value2"/>
+            <Viewbox Stretch="Uniform" Height="150" Width="400">
+                <TextBlock Text="{Binding ConvertedValue, StringFormat={}{0:F2}}" Classes="value2"/>
+            </Viewbox>
             <TextBlock Text="{Binding FormattedLowerSelectedCurrency}" Classes="h2"/>
         </StackPanel>
     </Grid>
